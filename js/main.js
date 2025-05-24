@@ -82,13 +82,10 @@ function initSigma(config) {
         maxRatio: 20, // How far can we zoom in?
     	};
 	
-    var a = new sigma({
-  renderer: {
-    container: document.getElementById('sigma-canvas'),
-    type: 'canvas'  // ← ← ← вот ЭТО ключевое
-  },
-  settings: Object.assign({}, drawProps, graphProps, mouseProps)
-});
+    var a = sigma.init(document.getElementById("sigma-canvas"))
+    .drawingProperties(drawProps)
+    .graphProperties(graphProps)
+    .mouseProperties(mouseProps);
 
 
     dataReady = function() {//This is called as soon as data is loaded
