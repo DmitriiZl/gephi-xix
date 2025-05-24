@@ -47,10 +47,9 @@ function initSigma(config) {
 	var data=config.data
 	
 	var drawProps, graphProps,mouseProps;
-	if (config.sigma && config.sigma.drawingProperties) {
-		console.log("Drawing properties from config:", config.sigma.drawingProperties);
+	if (config.sigma && config.sigma.drawingProperties)
 		drawProps=config.sigma.drawingProperties;
-	} else {
+	else 
 		drawProps={
         defaultLabelColor: "#000",
         defaultLabelSize: 14,
@@ -63,7 +62,6 @@ function initSigma(config) {
         fontStyle: "bold",
         activeFontStyle: "bold"
     }; 
-}
     
     if (config.sigma && config.sigma.graphProperties)	
     	graphProps=config.sigma.graphProperties;
