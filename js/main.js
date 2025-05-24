@@ -47,7 +47,8 @@ function initSigma(config) {
 	var data=config.data
 	
 	var drawProps, graphProps,mouseProps;
-	if (config.sigma && config.sigma.drawingProperties) 
+	if (config.sigma && config.sigma.drawingProperties)
+		console.log("Drawing properties from config:", config.sigma.drawingProperties);
 		drawProps=config.sigma.drawingProperties;
 	else
 		drawProps={
@@ -57,7 +58,7 @@ function initSigma(config) {
         defaultHoverLabelBGColor: "#002147",
         defaultLabelHoverColor: "#fff",
         labelThreshold: 10,
-        defaultEdgeType: "curve",
+        defaultEdgeType: "arrow",
         hoverFontStyle: "bold",
         fontStyle: "bold",
         activeFontStyle: "bold"
